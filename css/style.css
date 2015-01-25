@@ -30,19 +30,34 @@ a, a:focus, a:hover {
 	width: 20%;
 	background-color: #444;
 	padding: 10px 10px;
-}
-.guide ul {
-	list-style-type: none;
 	text-align: left;
 }
-.guide li {
-	margin: 5px 10px;
+.guide .group {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
-.guide .list ul {
+.guide .arrow{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 10px;
+	border-color: transparent transparent transparent #ffffff;
+}
+.guide .unfold .arrow{
+	border-width: 10px 5px 0 5px;
+	border-color: #ffffff transparent transparent transparent;
+}
+.guide .item-list {
+	margin-left: 20px;
 	display: none;
+	list-style-type: none;
 }
-.guide .list .active ul {
+.guide .unfold .item-list {
 	display: block;
+}
+.guide .group .item {
+	margin: 5px 0;
 }
 .main {
 	width: 70%;
