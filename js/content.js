@@ -1,4 +1,4 @@
-var host = "http://10.108.16.184:8080/";
+var host = "http://128.199.85.47:8080/";
 
 $.ajax({
 	type: "get",
