@@ -15,10 +15,16 @@ $.ajax({
 	type: "get",
 	url: host,
 	success: function(data) {
-		//$("body").append(data);
+		data = tempdata;
+		if (document.documentElement.clientWidth > 760) {
+			data.isWideStyle = true;
+		} else {
+			data.isWideStyle = false;
+		}
+
 		var tpl = document.getElementById("guide-tpl").innerHTML;
 		var guide = $(".guide");
-		var html = juicer(tpl, tempdata);
+		var html = juicer(tpl, data);
 		guide.html(html);
 
 		$(".guide .group-name").on("click", function() {
