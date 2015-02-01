@@ -1,21 +1,9 @@
-var host = "http://10.108.16.184:8080/list";
-var tempdata = {
-	data: [
-		{
-			name: "机器学习",
-			items:[{name:"社团发现"}, {name:"随机游走"}]
-		},{
-			name: "知识脉络图",
-			items:[{name:"关键词提取"}]
-		}
-	]
-};
+var host = "http://10.108.16.184:8080/";
 
 $.ajax({
 	type: "get",
-	url: host,
+	url: host + "list",
 	success: function(data) {
-		data = tempdata;
 		if (document.documentElement.clientWidth > 760) {
 			data.isWideStyle = true;
 		} else {
@@ -30,14 +18,41 @@ $.ajax({
 		$(".guide .group-name").on("click", function() {
 			$(this).parent(".group").toggleClass("unfold");
 		});
+
+		$(".guide .item a").on("click", function() {
+			var c = encodeURIComponent($(this).parents(".group").attr("name"));
+			var t = encodeURIComponent($(this).attr("name"));
+			$.ajax({
+				type: "get",
+				url: host + "article?c=" + c + "&t=" + t,
+				success: function(data) {
+					$(".main").html(markdown.toHTML(decodeURIComponent(data)));
+				},
+				error: function() {
+					$(".main").html("文章加载失败。");
+				}
+			});
+		});
 	},
 	error: function() {
 		if (typeof window.console != undefined) {
 			console.log("Error occurs.");
 		}
+		$(".guide").text("目录加载失败");
 	}
 });
 
-md_content = "#header 1\n##header 2\n###header 3\n####header 4\n#####header 5\n######header 6\n```\ncode in here.\n```\n";
-html_content = markdown.toHTML( md_content );
-$(".main").html(html_content);
+
+$.ajax({
+	type: "get",
+	url: "/index.md",
+	success: function(data) {
+		$(".main").html(markdown.toHTML(data));
+	},
+	error: function() {
+		if (typeof window.console != undefined) {
+			console.log("Error occurs.");
+		}
+		$(".main").text("文章加载失败");
+	}
+});
