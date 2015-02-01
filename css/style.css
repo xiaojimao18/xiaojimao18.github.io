@@ -77,6 +77,9 @@ a, a:focus, a:hover {
 	.container {
 		min-width: 200px;
 	}
+	.header {
+		height: 70px;
+	}
 	.guide {
 		width: 100%;
 	}
