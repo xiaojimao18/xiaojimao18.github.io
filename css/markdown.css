@@ -459,6 +459,7 @@
   white-space: pre;
   background: transparent;
   border: 0;
+  color: #222;
 }
 
 .markdown-body .highlight {
