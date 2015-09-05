@@ -439,7 +439,7 @@
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: #445ede;
   border-radius: 3px;
   color: #fff;
 }
@@ -471,7 +471,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: rgba(0,0,0,0.6);
+  background-color: #445ede;
   border-radius: 3px;
 }
 
@@ -659,4 +659,11 @@
   z-index: 1;
   position: relative;
   border-color: #4183c4;
+}
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
 }
