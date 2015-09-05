@@ -11,7 +11,7 @@
 
 <body>
 	<div class="top md-shadow">
-    	<h2 class="title">Cowx的博客</h2>
+    	<h2 class="title"><img class="menu" src="images/menu.png">Cowx的博客</h2>
 	</div>
     <div class="container">
         <div class="guide">加载中...</div>
@@ -19,8 +19,8 @@
     </div>
     <script type="text/template" id="guide-tpl">
         {@each data as group}
-        <div class="group md-shadow {@if isWideStyle}unfold{@/if}" name="${group.name}">
-            <a href="javascript:void(0)" class="group-name md-shadow">${group.name}</a>
+        <div class="group md-shadow" name="${group.name}">
+            <a class="group-name md-shadow">${group.name}</a>
             {@if group.items.length > 0}
             <ul class="item-list">
                 {@each group.items as item}

@@ -8,12 +8,15 @@ var blog = (function() {
 	}
 
 	blog.bindEvent = function() {
-		$(".guide .group-name").on("click", function() {
-			$group = $(this).parent(".group");
-			if ($group.hasClass("unfold")) {
-				$group.removeClass("unfold");
-			} else {
-				$group.addClass("unfold");
+		$(document).on("click", ".menu", function() {
+			$("body").addClass('on-menu');
+			$(".guide").focus();
+		});
+
+		$(document).on("click", ".on-menu", function(evt) {
+			var $target = $(evt.target);
+			if (!$target.hasClass("guide") && !$target.hasClass("group-name")){
+				$("body").removeClass('on-menu');
 			}
 		});
 
