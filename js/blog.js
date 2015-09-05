@@ -12,10 +12,8 @@ var blog = (function() {
 			$group = $(this).parent(".group");
 			if ($group.hasClass("unfold")) {
 				$group.removeClass("unfold");
-				$group.find(".item-list").slideUp(200);
 			} else {
 				$group.addClass("unfold");
-				$group.find(".item-list").slideDown(200);
 			}
 		});
 

@@ -214,6 +214,11 @@ a {
 .container .guide .item-list {
     margin-left: 20px;
     list-style-type: none;
+    display: none;
+}
+
+.container .guide .unfold .item-list {
+    display: block;
 }
 
 .container .guide .group .item-list a{
