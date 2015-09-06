@@ -143,15 +143,10 @@ html {
 	height: 100%;
     font: 12px/1.5 hiragino sans gb, microsoft yahei, simsun;
 }
-
 body {
 	height: 100%;
 	color: #757575;
 	background-color: #e7e9fd;
-}
-
-a {
-    text-decoration: none;
 }
 .top {
 	width: 100%;
@@ -183,22 +178,21 @@ a {
 	height: 0;
 	clear: both;
 }
-.container .guide .group, .container .main {
+.container .guide .group,
+.container .main {
 	background-color: #fafafa;
 }
 .container .guide {
-    float: left;
+    float: right;
     width: 200px;
     font-size: 14px;
     box-sizing: border-box;
 }
-
 .container .guide .group {
     margin-bottom: 10px;
     overflow: hidden;
     
 }
-
 .container .guide .group .group-name {
 	height: 30px;
 	line-height: 30px;
@@ -207,12 +201,10 @@ a {
 	background-color: #5677fc;
 	display: block;
 }
-
 .container .guide .item-list {
     overflow: hidden;
     list-style-type: none;
 }
-
 .container .guide .group .item-list a{
 	color: #757575;
 	overflow: hidden;
@@ -220,25 +212,26 @@ a {
 	text-overflow: ellipsis;
 	box-sizing: border-box;
 	padding: 5px 10px;
+    text-decoration: none;
 	width: 100%;
 	height: 30px;
 	line-height: 20px;
 	display: block;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
 }
-
 .container .guide .group .item-list a:hover{
 	color: #fff;
 	background-color: #445ede;
 }
-
 .container .main {
     width: 600px;
     padding: 20px;
-    margin-left: 220px;
+    /*margin-left: 220px;*/
     box-sizing: border-box;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 840px) {
 	.on-menu .top, .on-menu .main{
 		filter: blur(2px);
 		-webkit-filter: blur(2px);
@@ -280,6 +273,22 @@ a {
         margin-top: 10px;
         margin-left: 0;
         width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .top .title {
+        width: 1120px;
+    }
+    .container {
+        width: 1120px;
+    }
+    .container .guide {
+        width: 300px;
+    }
+    .container .main {
+        width: 800px;
+        /*margin-left: 320px;*/
     }
 }
 
