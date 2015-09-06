@@ -217,8 +217,6 @@ body {
 	height: 30px;
 	line-height: 20px;
 	display: block;
-    transition: background-color 0.3s;
-    -webkit-transition: background-color 0.3s;
 }
 .container .guide .group .item-list a:hover{
 	color: #fff;
@@ -227,7 +225,6 @@ body {
 .container .main {
     width: 600px;
     padding: 20px;
-    /*margin-left: 220px;*/
     box-sizing: border-box;
 }
 
@@ -238,13 +235,13 @@ body {
 	}
 	.top .title {
 		width: 90%;
-		padding-left: 35px;
+		padding-left: 30px;
 	}
 	.top .menu {
 		position: absolute;
-		top: 15px;
+		top: 20px;
 		left: 5%;
-		width: 30px;
+		width: 20px;
 		display: block;
 	}
     .container {
@@ -254,9 +251,9 @@ body {
         float: none;
         position: fixed;
         top: 0;
-        left: -200px;
-        width: 200px;
-        height: 100%;
+        left: -70%;
+        width: 70%;
+        height: 110%; /*for chrome scroll bar*/
         transition: left 0.5s;
         -webkit-transition: left 0.5s;
         background-color: #fafafa;
@@ -288,7 +285,6 @@ body {
     }
     .container .main {
         width: 800px;
-        /*margin-left: 320px;*/
     }
 }
 
