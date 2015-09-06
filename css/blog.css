@@ -273,7 +273,7 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .top .title {
         width: 1120px;
     }
