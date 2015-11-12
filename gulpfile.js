@@ -12,7 +12,6 @@ gulp.task('js-min', function() {
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./js'));
-    console.log('task js-min done');
 });
 
 gulp.task('css-min', function() {
@@ -20,12 +19,9 @@ gulp.task('css-min', function() {
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
-    console.log('task css-min done');
 });
 
-gulp.task('default', function() {
-    // gulp.run(['js-min', 'css-min']);
-
+gulp.task('default', ['js-min', 'css-min'], function() {
     gulp.watch(['./js/*.js', '!./js/*.min.js'], ['js-min']);
     gulp.watch(['./css/*.css', '!./css/*.min.css'], ['css-min']);
 });
