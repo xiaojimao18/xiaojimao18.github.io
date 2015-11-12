@@ -1,12 +1,9 @@
 html {
-    font: 12px/1.5 hiragino sans gb, microsoft yahei, simsun;
-
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     height: 100%;
 }
-
 *,
 *:before,
 *:after {
@@ -14,14 +11,14 @@ html {
        -moz-box-sizing: inherit;
             box-sizing: inherit;
 }
-
 body {
+    font: 12px/1.5 hiragino sans gb, microsoft yahei, simsun;
+
     height: 100%;
 
     color: #757575;
     background-color: #e7e9fd;
 }
-
 .top {
     position: relative;
 
@@ -30,7 +27,6 @@ body {
 
     background-color: #5677fc;
 }
-
 .top .menu {
     position: absolute;
     top: 22px;
@@ -160,8 +156,8 @@ body {
         width: 70%;
         height: 110%; /*for chrome scroll bar*/
 
-        -webkit-transition: left .5s;
-                transition: left .5s;
+        -webkit-transition: left 0.5s;
+                transition: left 0.5s;
 
         background-color: #fafafa;
     }
@@ -179,7 +175,6 @@ body {
         margin-left: 0;
     }
 }
-
 @media (min-width: 1400px) {
     .top .title {
         width: 1120px;
@@ -194,7 +189,6 @@ body {
         width: 800px;
     }
 }
-
 .md-shadow {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
