@@ -3,8 +3,8 @@ var blog = (function() {
 		blog = {};
 
 	blog.init = function() {
-		blog.index();
 		blog.getArticleList();
+		blog.index();
 	}
 
 	blog.bindEvent = function() {
@@ -45,9 +45,7 @@ var blog = (function() {
 				data.isWideStyle = false;
 			}
 
-			var tpl = document.getElementById("guide-tpl").innerHTML;
-			var html = juicer(tpl, data);
-			$(".guide").html(html);
+			$(".guide").html(template('blog-groups', data));
 
 			_this.bindEvent();
 		}).fail(function() {

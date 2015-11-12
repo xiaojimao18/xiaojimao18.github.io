@@ -12,28 +12,16 @@
 
 <body>
     <div class="top md-shadow">
-        <i class="menu"></i><h2 class="title">Cowx的博客</h2>
+        <i class="menu"></i>
+        <h2 class="title">Cowx的博客</h2>
     </div>
     <div class="container">
         <div class="guide">加载中...</div>
         <div class="main md-shadow markdown-body">加载中...</div>
     </div>
-    <script type="text/template" id="guide-tpl">
-        {@each data as group}
-        <div class="group md-shadow" name="${group.name}">
-            <a class="group-name md-shadow">${group.name}</a>
-            {@if group.items.length > 0}
-            <ul class="item-list">
-                {@each group.items as item}
-                <li class="item"><a href="javascript:void(0)" name="${item.name}">${item.name}</a></li>
-                {@/each}
-            </ul>
-            {@/if}
-        </div>
-        {@/each}
-    </script>
+
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/juicer-min.js"></script>
+    <script type="text/javascript" src="js/template.min.js"></script>
     <script type="text/javascript" src="js/markdown.min.js"></script>
     <script type="text/javascript" src="js/blog.min.js"></script>
 </body>

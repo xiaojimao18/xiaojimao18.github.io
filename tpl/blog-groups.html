@@ -1,0 +1,12 @@
+{{each data as group}}
+<div class="group md-shadow" name="{{group.name}}">
+    <a class="group-name md-shadow">{{group.name}}</a>
+    {{if group.items.length > 0}}
+    <ul class="item-list">
+        {{each group.items as item}}
+        <li class="item"><a href="javascript:void(0)" name="{{item.name}}">{{item.name}}</a></li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
+{{/each}}
