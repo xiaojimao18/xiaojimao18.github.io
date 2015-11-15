@@ -1,5 +1,5 @@
 var blog = (function() {
-	var host = 'http://127.0.0.1:8080/', //"http://104.131.146.102/",
+	var host = "http://104.131.146.102/",
 		blog = {};
 
 	blog.init = function() {
