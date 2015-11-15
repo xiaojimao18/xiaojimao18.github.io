@@ -1,5 +1,5 @@
 var blog = (function() {
-	var host = "http://104.131.146.102:8080/",
+	var host = 'http://127.0.0.1:8080/', //"http://104.131.146.102/",
 		blog = {};
 
 	blog.init = function() {
@@ -21,15 +21,9 @@ var blog = (function() {
 		});
 
 		$(".guide .item a").on("click", function() {
-			var dirName = encodeURIComponent($(this).parents(".group").attr("name"));
-			var artName = encodeURIComponent($(this).attr("name"));
-			$.ajax({
-				url: host + "article?c=" + dirName + "&t=" + artName
-			}).done(function(data) {
-				$(".main").html(markdown.toHTML(decodeURIComponent(data)));
-			}).fail(function() {
-				$(".main").html("文章加载失败。");
-			});
+			var dirName = $(this).parents(".group").attr("name");
+			var artName = $(this).attr("name");
+			blog.getArticle(dirName, artName);
 		});
 	};
 
@@ -45,7 +39,12 @@ var blog = (function() {
 				data.isWideStyle = false;
 			}
 
-			$(".guide").html(template('blog-groups', data));
+			if (typeof data === 'string') {
+				data = JSON.parse(data);
+			}
+			var html = template('blog-groups', data);
+			$(".guide").html(html);
+			// $(".guide").html(template('blog-groups', data));
 
 			_this.bindEvent();
 		}).fail(function() {
@@ -53,9 +52,22 @@ var blog = (function() {
 		});
 	};
 
+	blog.getArticle = function(dirName, artName) {
+		dirName = encodeURIComponent(dirName);
+		artName = encodeURIComponent(artName);
+
+		$.ajax({
+			url: host + "article/" + dirName + "/" + artName
+		}).done(function(data) {
+			$(".main").html(markdown.toHTML(data));
+		}).fail(function() {
+			$(".main").html("文章加载失败。");
+		});
+	};
+
 	blog.index = function() {
 		$.ajax({
-			url: "/index.md"
+			url: "http://xiaojimao18.github.io/index.md"
 		}).done(function(data) {
 			$(".main").html(markdown.toHTML(data));
 		}).fail(function() {
