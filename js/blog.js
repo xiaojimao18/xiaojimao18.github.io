@@ -1,5 +1,5 @@
 var blog = (function() {
-	var host = "http:/cowx.me/",
+	var host = "http://cowx.me/",
 		blog = {};
 
 	blog.init = function() {
