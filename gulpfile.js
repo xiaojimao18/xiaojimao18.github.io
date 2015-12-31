@@ -21,6 +21,8 @@ gulp.task('css-min', function() {
         .pipe(gulp.dest('./css'));
 });
 
+gulp.task('build', ['js-min', 'css-min']);
+
 gulp.task('default', ['js-min', 'css-min'], function() {
     gulp.watch(['./js/*.js', '!./js/*.min.js'], ['js-min']);
     gulp.watch(['./css/*.css', '!./css/*.min.css'], ['css-min']);
