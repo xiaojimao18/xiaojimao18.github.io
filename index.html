@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title>Cowx的博客</title>
-    <link rel="stylesheet" href="css/reset.min.css">
-    <link rel="stylesheet" href="css/markdown.min.css">
-    <link rel="stylesheet" href="css/blog.min.css">
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>Timo Liu</title>
+  <link rel="stylesheet" href="/blog/index.c20bd6ce.css">
 </head>
 <body>
-    <div class="top md-shadow">
-        <i class="menu"></i>
-        <h2 class="title">Cowx的博客</h2>
-    </div>
-    <div class="container">
-        <div class="guide">Loading...</div>
-        <div class="main md-shadow markdown-body">Loading...</div>
-    </div>
+  <div class="sidebar">
+    <div class="avatar"></div>
+    <h2 class="title">Timo Liu</h2>
+    <p class="desc">It's never too late to learn.</p>
+  </div>
+  <div class="main-content" v-cloak>
+    <ul class="blog-list" :class="{'blog-mode': currentBlogId}">
+      <li class="blog shadow" :class="{'selected': currentBlogId == blog.id}" v-for="blog in blogList" @click="getBlog(blog.id)">
+        <h3 class="blog-title">{{* blog.title }}</h3>
+        <span class="date">{{* blog.date }}</span>
+        <i class="close-blog" @click.stop="closeBlog"></i>
+        <ul class="tag-list">
+          <li class="tag" v-for="tag in blog.tags">{{* tag }}</li>
+        </ul>
+        <p class="blog-content markdown-body">{{{ blog.content }}}</p>
+      </li>
+    </ul>
+  </div>
 
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/template.min.js"></script>
-    <script src="js/markdown.min.js"></script>
-    <script src="js/blog.min.js"></script>
+  <script src="/blog/index.f4ce3a85.js"></script>
 </body>
 </html>
