@@ -4,24 +4,23 @@
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
   <title>Timo Liu</title>
-  <link rel="stylesheet" href="/blog\index.ed12c5f6.css">
+  <link rel="stylesheet" href="/blog\index.75cfd1b0.css">
 </head>
 <body>
   <div id="app">
-    <div class="sidebar">
-      <div class="avatar"></div>
-      <h2 class="title">Timo Liu</h2>
-      <p class="desc">It's never too late to learn.</p>
+    <div class="header">
+      <a class="name" href="/">TIMO LIU</a>
+      <a class="github" href="https://github.com/xiaojimao18" target="_blank"></a>
     </div>
     <div class="main-content" v-cloak>
       <ul class="blog-list" :class="{'blog-mode': isBlogMode}">
-        <li class="blog-item shadow" v-for="blog in blogList">
+        <li class="blog-item" v-for="blog in blogList">
           <x-blog :blog="blog"></x-blog>
         </li>
       </ul>
     </div>
   </div>
 
-  <script src="/blog\index.ed12c5f6.js"></script>
+  <script src="/blog\index.75cfd1b0.js"></script>
 </body>
 </html>
