@@ -4,28 +4,23 @@
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
   <title>Timo Liu</title>
-  <link rel="stylesheet" href="/blog/index.c20bd6ce.css">
+  <link rel="stylesheet" href="/blog\index.a01fc894.css">
 </head>
 <body>
-  <div class="sidebar">
-    <div class="avatar"></div>
-    <h2 class="title">Timo Liu</h2>
-    <p class="desc">It's never too late to learn.</p>
-  </div>
-  <div class="main-content" v-cloak>
-    <ul class="blog-list" :class="{'blog-mode': currentBlogId}">
-      <li class="blog shadow" :class="{'selected': currentBlogId == blog.id}" v-for="blog in blogList" @click="getBlog(blog.id)">
-        <h3 class="blog-title">{{* blog.title }}</h3>
-        <span class="date">{{* blog.date }}</span>
-        <i class="close-blog" @click.stop="closeBlog"></i>
-        <ul class="tag-list">
-          <li class="tag" v-for="tag in blog.tags">{{* tag }}</li>
-        </ul>
-        <p class="blog-content markdown-body">{{{ blog.content }}}</p>
-      </li>
-    </ul>
+  <div id="app">
+    <div class="header">
+      <a class="name" href="/">TIMO LIU</a>
+      <a class="github" href="https://github.com/xiaojimao18" target="_blank"></a>
+    </div>
+    <div class="main-content" v-cloak>
+      <ul class="blog-list" :class="{'blog-mode': isBlogMode}">
+        <li class="blog-item" v-for="blog in blogList">
+          <x-blog :blog="blog"></x-blog>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <script src="/blog/index.f4ce3a85.js"></script>
+  <script src="/blog\index.a01fc894.js"></script>
 </body>
 </html>
