@@ -2,11 +2,14 @@
 layout: post 
 title: JavaScript中的原型和继承
 date: 2015-04-30
+excerpt_separator: <!--end_excerpt-->
 ---
 
 ## 原型（prototype）
 
 无论什么时候，只要创建了一个新函数，就会根据一组特定的规则为该函数创建一个prototype属性，该属性指向一个原型对象。该原型对象中，有一个constructor属性，指向prototype所在的函数。
+
+<!--end_excerpt-->
 
 例如以下代码
 

@@ -2,7 +2,7 @@
 title: Timo
 tagline: Blogs
 url: https://getpoole.com
-paginate: 1
+paginate: 10
 baseurl: ""
 permalink: pretty
 

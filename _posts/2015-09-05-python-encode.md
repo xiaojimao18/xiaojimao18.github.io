@@ -2,11 +2,14 @@
 layout: post
 title: Python编码学习
 date: 2015-09-05
+excerpt_separator: <!--end_excerpt-->
 ---
 
-如果你懂英语，不妨查看[官方Unicode文档](https://docs.python.org/2/howto/unicode.html)，这里有更详细的讲解。
+如果你英语不错，不妨查看[官方Unicode文档](https://docs.python.org/2/howto/unicode.html)，这里有更详细的讲解。
 
 需要注意的是，python2.x 和 python3中的编码不同，以下说的是python2.x中的编码
+
+<!--end_excerpt-->
 
 str和unicode
 ------------
