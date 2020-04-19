@@ -45,3 +45,27 @@
     margin-left: var(--spacer);
   }
 }
+
+// CUSTOM
+.github-logo {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 0 0 5px;
+}
+.post {
+  position: relative;
+}
+.post-link {
+  display: flex;
+  text-decoration: none;
+}
+.post-link .post-date {
+  margin: 0 10px 0 0;
+  flex: 0 0 95px;
+  line-height: 2rem;
+}
+.post-link .post-title {
+  margin: 0;
+  font-size: 1.5rem;
+}

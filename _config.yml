@@ -1,8 +1,9 @@
 # Setup
 title: Timo
-tagline: Blogs
-url: https://getpoole.com
-paginate: 10
+url: https://xiaojimao18.github.io/
+github_url: https://github.com/xiaojimao18/
+paginate: 5
+paginate_path: "/page/:num/"
 baseurl: ""
 permalink: pretty
 
