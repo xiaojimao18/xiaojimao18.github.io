@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: JavaScript中的原型和继承
+title: JavaScript 中的原型和继承
 date: 2015-04-30
 excerpt_separator: <!--end_excerpt-->
 ---

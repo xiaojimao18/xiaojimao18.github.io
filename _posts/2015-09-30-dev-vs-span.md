@@ -1,6 +1,6 @@
 ---
 layout: post
-title: div与span的区别
+title: div 与 span 的区别
 date: 2015-09-30
 excerpt_separator: <!--end_excerpt--> 
 ---

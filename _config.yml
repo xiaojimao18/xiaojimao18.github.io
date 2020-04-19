@@ -2,7 +2,7 @@
 title: Timo
 url: https://xiaojimao18.github.io/
 github_url: https://github.com/xiaojimao18/
-paginate: 5
+paginate: 10
 paginate_path: "/page/:num/"
 baseurl: ""
 permalink: pretty

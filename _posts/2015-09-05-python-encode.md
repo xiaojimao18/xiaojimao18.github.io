@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python编码学习
+title: Python 编码学习
 date: 2015-09-05
 excerpt_separator: <!--end_excerpt-->
 ---
