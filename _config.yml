@@ -6,6 +6,7 @@ paginate: 10
 paginate_path: "/page/:num/"
 baseurl: ""
 permalink: pretty
+ga_analytics: "UA-164054816-1"
 
 # Gems
 plugins:
